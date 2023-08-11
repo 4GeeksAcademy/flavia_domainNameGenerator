@@ -1,9 +1,5 @@
 /* eslint-disable */
-import "bootstrap";
 import "./style.css";
-
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
 
 function generarDominio() {
   //write your code her
@@ -32,13 +28,20 @@ function generarDominio() {
             partesDelDominio[1][adjetivo] +
             partesDelDominio[2][sustantivo] +
             partesDelDominio[3][extension] +
-            " \n";
+            "\n";
         }
       }
     }
   }
-  console.log(miDominio);
+  return miDominio;
 }
 document.addEventListener("DOMContentLoaded", function() {
-  document.querySelector("#Logo").addEventListener("click", generarDominio);
+  // Obtén el elemento del modal
+  const modal = document.querySelector("#staticBackdrop");
+
+  // Agrega un listener para el evento shown.bs.modal
+  modal.addEventListener("shown.bs.modal", function() {
+    const modalBody = document.querySelector("#modalBody");
+    modalBody.textContent = generarDominio();
+  });
 });

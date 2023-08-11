@@ -27,8 +27,59 @@
             height="24"
             class="d-inline-block align-text-top"
           />
+          Generando Dominios
         </a>
-        Proyecto nº6
+        <div>
+          <!--Este div contiene el modal-->
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-secondary me-4"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
+            Click aquí para descubrir las posibilidades
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    Ideas para inspirarte:
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    data-bs-dismiss="modal"
+                  >
+                    ¡Gracias!
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
     <script
